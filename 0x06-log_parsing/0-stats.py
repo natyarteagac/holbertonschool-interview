@@ -1,36 +1,40 @@
 #!/usr/bin/python3
+"""
+Function to print the file sent from stdin with the requirements of Holberton School
 
+"""
 import sys
 
 count = 0
-count200 = 0
-count401 = 0
-count403 = 0
-count404 = 0
-count405 = 0
-count500 = 0
-suma = 0
+add_size = 0
+count_200 = 0
+count_401 = 0
+count_403 = 0
+count_404 = 0
+count_405 = 0
+count_500 = 0
 for lines in sys.stdin:
     x = lines.split(" ")
-    suma += int(x[8])
+    add_size += int(x[8])
     count += 1
     if (int(x[7]) == 200):
-        count200 += 1
+        count_200 += 1
     if (int(x[7]) == 401):
-        count401 += 1
+        count_401 += 1
     if (int(x[7]) == 403):
-        count403 += 1
+        count_403 += 1
     if (int(x[7]) == 404):
-        count404 += 1
+        count_404 += 1
     if (int(x[7]) == 405):
-        count405 += 1
+        count_405 += 1
     if (int(x[7]) == 500):
-        count500 += 1
+        count_500 += 1
     if count == 10:
-        print("File size: ", suma)
-        print("200: ", count200)
-        print("401: ", count401)
-        print("403: ", count403)
-        print("404: ", count404)
-        print("405: ", count405)
-        print("500: ", count500)
+        print("File size: {:d}".format(add_size))
+        print("200: {:d}".format(count_200))
+        print("401: {:d}".format(count_401))
+        print("403: {:d}".format(count_403))
+        print("404: {:d}".format(count_404))
+        print("405: {:d}".format(count_405))
+        print("500: {:d}".format(count_500))
+        count = 1
