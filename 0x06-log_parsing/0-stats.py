@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Function to print the file sent from stdin with the requirements of Holberton School
+Function to print the file sent from stdin
+with the requirements of Holberton School
 
 """
 import sys
@@ -29,7 +30,7 @@ for lines in sys.stdin:
         count_405 += 1
     if (int(x[7]) == 500):
         count_500 += 1
-    if count == 10:
+    if (count == 10 or type == KeyboardInterrupt()):
         print("File size: {:d}".format(add_size))
         print("200: {:d}".format(count_200))
         print("401: {:d}".format(count_401))
