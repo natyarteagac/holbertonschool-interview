@@ -1,4 +1,4 @@
-<h1 class="gap">0x03. Minimum Operations</h1>
+<h1 class="gap">Minimum Operations</h1>
 
 <h2>Requirements</h2>
 
